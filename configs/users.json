@@ -1,0 +1,7 @@
+{
+  "_comment": "DEMO users only. Passwords are demo-grade; override via AUDITTRAIL_USERS_JSON env pointing to a private file in any real deployment.",
+  "users": [
+    {"username": "auditor", "password": "audit-demo-2025", "role": "auditor"},
+    {"username": "service", "password": "service-demo-2025", "role": "service"}
+  ]
+}

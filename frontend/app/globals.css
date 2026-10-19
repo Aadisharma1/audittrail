@@ -1,0 +1,67 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b27;
+  --border: #262d3f;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #4c8dff;
+  --sev0: #3fb950;
+  --sev1: #58a6ff;
+  --sev2: #d29922;
+  --sev3: #f0883e;
+  --sev4: #f85149;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+h1 { font-size: 1.5rem; margin: 0 0 2px; }
+h2 { font-size: 1.05rem; margin: 0 0 10px; }
+.subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 18px; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; }
+
+.sev { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.sev0 { background: rgba(63,185,80,.15); color: var(--sev0); }
+.sev1 { background: rgba(88,166,255,.15); color: var(--sev1); }
+.sev2 { background: rgba(210,153,34,.15); color: var(--sev2); }
+.sev3 { background: rgba(240,136,62,.15); color: var(--sev3); }
+.sev4 { background: rgba(248,81,73,.2); color: var(--sev4); }
+
+.risk-item { padding: 8px 10px; border-left: 3px solid var(--sev3); background: rgba(248,81,73,.06); border-radius: 6px; margin-bottom: 8px; font-size: 0.85rem; }
+.risk-item .meta { color: var(--muted); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.controls input, .controls select {
+  background: var(--bg); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 10px; font-size: 0.85rem;
+}
+.controls button {
+  background: var(--accent); color: white; border: none; border-radius: 8px;
+  padding: 8px 16px; cursor: pointer; font-size: 0.85rem;
+}
+.token-row { display: flex; gap: 8px; align-items: center; }
+.token-row input { flex: 1; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+.muted { color: var(--muted); font-size: 0.8rem; }
+.error { color: var(--sev4); font-size: 0.85rem; }

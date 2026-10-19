@@ -1,0 +1,29 @@
+{
+  "repeated_failed_login": {
+    "enabled": true,
+    "max_failures": 5,
+    "window_minutes": 15,
+    "severity": 3
+  },
+  "impossible_frequency": {
+    "enabled": true,
+    "max_events_per_minute": 30,
+    "window_minutes": 1,
+    "severity": 2
+  },
+  "suspicious_state_transition": {
+    "enabled": true,
+    "transitions": [
+      ["account_disabled", "privilege_grant"],
+      ["auth_failed", "password_reset"],
+      ["state_change", "role_escalation"]
+    ],
+    "window_minutes": 30,
+    "severity": 4
+  },
+  "unusual_request_volume": {
+    "enabled": true,
+    "max_events_per_hour": 500,
+    "severity": 2
+  }
+}
